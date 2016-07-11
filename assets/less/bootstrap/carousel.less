@@ -90,68 +90,67 @@
 // Left/right controls for nav
 // ---------------------------
 
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: @carousel-control-width;
-  .opacity(@carousel-control-opacity);
-  font-size: @carousel-control-font-size;
-  color: @carousel-control-color;
-  text-align: center;
-  text-shadow: @carousel-text-shadow;
-  // We can't have this transition here because WebKit cancels the carousel
-  // animation if you trip this while in the middle of another animation.
+// .carousel-control {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: @carousel-control-width;
+//   .opacity(@carousel-control-opacity);
+//   font-size: @carousel-control-font-size;
+//   color: @carousel-control-color;
+//   text-align: center;
+//   text-shadow: @carousel-text-shadow;
+//   // We can't have this transition here because WebKit cancels the carousel
+//   // animation if you trip this while in the middle of another animation.
 
-  // Set gradients for backgrounds
-  &.left {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
-  }
-  &.right {
-    left: auto;
-    right: 0;
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
-  }
+//   // Set gradients for backgrounds
+//   &.left {
+//     // #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+//   }
+//   &.right {
+//     left: auto;
+//     right: 0;
+//     // #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+//   }
 
-  // Hover/focus state
-  &:hover,
-  &:focus {
-    outline: 0;
-    color: @carousel-control-color;
-    text-decoration: none;
-    .opacity(.9);
-  }
+//   // Hover/focus state
+//   &:hover,
+//   &:focus {
+//     outline: 0;
+//     color: @carousel-control-color;
+//     text-decoration: none;
+//     .opacity(.9);
+//   }
 
   // Toggles
-  .icon-prev,
-  .icon-next,
-  .glyphicon-chevron-left,
-  .glyphicon-chevron-right {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-  }
-  .icon-prev,
-  .glyphicon-chevron-left {
-    left: 50%;
-    margin-left: -10px;
-  }
-  .icon-next,
-  .glyphicon-chevron-right {
-    right: 50%;
-    margin-right: -10px;
-  }
-  .icon-prev,
-  .icon-next {
-    width:  20px;
-    height: 20px;
-    margin-top: -10px;
-    line-height: 1;
-    font-family: serif;
-  }
-
+  // .icon-prev,
+  // .icon-next,
+  // .glyphicon-chevron-left,
+  // .glyphicon-chevron-right {
+  //   position: absolute;
+  //   top: 50%;
+  //   z-index: 5;
+  //   display: inline-block;
+  // }
+  // .icon-prev,
+  // .glyphicon-chevron-left {
+  //   left: 50%;
+  //   margin-left: -10px;
+  // }
+  // .icon-next,
+  // .glyphicon-chevron-right {
+  //   right: 50%;
+  //   margin-right: -10px;
+  // }
+  // .icon-prev,
+  // .icon-next {
+  //   width:  20px;
+  //   height: 20px;
+  //   margin-top: -10px;
+  //   line-height: 1;
+  //   font-family: serif;
+  // }
 
   .icon-prev {
     &:before {
@@ -163,7 +162,9 @@
       content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
     }
   }
-}
+
+//add css style for the slider
+
 
 // Optional indicator pips
 //
@@ -171,6 +172,7 @@
 // slide your carousel holds.
 
 .carousel-indicators {
+  display: none;
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -240,30 +242,43 @@
     .glyphicon-chevron-right,
     .icon-prev,
     .icon-next {
-      width: 30px;
-      height: 30px;
-      margin-top: -15px;
-      font-size: 30px;
+      // width: 30px;
+      // height: 30px;
+      // margin-top: -15px;
+      // font-size: 30px;
     }
     .glyphicon-chevron-left,
     .icon-prev {
-      margin-left: -15px;
+      // margin-left: -15px;
     }
     .glyphicon-chevron-right,
     .icon-next {
-      margin-right: -15px;
+      // margin-right: -15px;
     }
   }
 
   // Show and left align the captions
   .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
+    top: 5%;
+    left: 0%;
+    // right: 20%;
+    // padding-bottom: 30px;
+    /*add css style for slider caption*/
+    h2{
+      text-align: left;
+      font-size: 80px;
+      color: black;
+      font-family: "LeagueGothic-Regular";
+      line-height: 70px;
+      img{
+       margin: 0;
+      }
+    }
   }
 
   // Move up the indicators
   .carousel-indicators {
     bottom: 20px;
+    display: none;
   }
 }
