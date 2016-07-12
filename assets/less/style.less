@@ -19,11 +19,11 @@ section{
 }
 /*css for header*/
 #slider{	
-		
-	.controls{
-			// position: absolute;
-			// top: 410px;
-			// left: 0px;
+			.controls{
+			position: absolute;
+			top: 410px;
+			left: 0px;
+			z-index: 1000;
 			a.left-control{
 				text-decoration: none !important;
 				
@@ -169,6 +169,9 @@ section{
 		.gallery-heading{
 			.heading();
 			.customNavigation{
+				a.btn{
+					margin-right: -20px;
+				}
 				float: right;
 				i{
 					border-radius: 3px;
@@ -224,6 +227,69 @@ section{
 				i{
 					color: white;
 					text-align: center;
+				}
+			}
+		}
+	}
+	.testimonials{
+		.owl-pagination{
+				display: none !important;
+			}
+		.test-heading{
+			.heading();
+			.customNavigation{
+				a.btn{
+					margin-right: -20px;
+				}
+				float: right;
+				i{
+					border-radius: 3px;
+					padding: 5px;
+					font-size: 10px;
+					background-color: #bfbfbf;
+					color: white;
+					text-align: center;
+					&:hover{
+						background-color: black;
+					}
+				}
+			}
+		}
+		.test-item{
+			.test-item-inner{
+				position: relative;
+				background-color: #e5e5e5;
+				padding: 10px;
+				margin-top: 15px;
+				i{
+					color: white;
+					font-size: 30px;
+				}
+
+			}&:before{
+				content: '';
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				bottom: 55px;
+				width:0px;
+				left: 45%;
+				opacity: 1;
+				border-left:  20px solid transparent;
+				border-right: 20px solid transparent;
+				border-top: 20px solid #e5e5e5;
+			}
+			.author-item{
+				margin-top: 30px;
+				text-align: center;
+				h4{
+					text-transform: uppercase;
+					color: #805fb3;
+					font-size: 13px;
+					font-weight: bold;
+				}
+				i{
+					font-size: 12px;
 				}
 			}
 		}

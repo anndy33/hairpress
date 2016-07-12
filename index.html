@@ -237,28 +237,14 @@
     				<div class="gallery">
     					<div class="gallery-heading">
     						<span><b>gallery</b></span>
-    						
 								<div class="customNavigation">
 									<a class="btn prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-									<a class="btn next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-									
+									<a class="btn next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>	
 								</div>
     						<h4>Cutting edge hairstyles</h4>
-
     						<img src="images/service-line.png">
-    						<!-- <div class="owl-controls clickable">
-    							<div class="owl-pagination">
-    								<div class="owl-page active">
-    									<i class="fa fa-chevron-left" aria-hidden="true"></i>
-    								</div>
-    								<div class="owl-page active">
-    									<i class="fa fa-chevron-right" aria-hidden="true"></i>
-    								</div>	
-    							</div>	
-    						</div> -->
     					</div>
-    					
-	    					<div class="gallery-item">
+	    				<div class="gallery-item">
 	    						<div id="owl-demo">
 	    							<div class="item">
 	    								<div class="row-image">
@@ -373,8 +359,50 @@
 	    								</div>
 	    							</div>
 	    						</div>	
+    						</div>
+    				</div>
+    			</div>
+    			<div class="col-md-3">
+    				<div class="testimonials">
+    					<div class="test-heading">
+    						<span><b>Testimonials</b></span>
+								<div class="customNavigation">
+									<a class="btn prev-1"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+									<a class="btn next-1"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>	
+								</div>
+    						<h4>What other said about us</h4>
+    						<img src="images/service-line.png">
     					</div>
-
+    					<div id="owl-demo-1">
+    						<div class="item">
+								<div class="test-item">
+									<div class="test-item-inner">
+										<p>
+										<i class="fa fa-quote-left" aria-hidden="true"></i>
+										Donec suscipit vehicula turpis sed lutpat Quisque vitae quam neque. Morbi cilisis placerat dapibus. Etiaes nulla ed leo...
+										</p>
+									</div>
+									<div class="author-item">
+										<h4>John doe</h4>
+										<i>Movie superstar</i>	
+									</div>			
+								</div>
+    						</div>
+    						<div class="item">
+								<div class="test-item">
+									<div class="test-item-inner">
+										<p>
+										<i class="fa fa-quote-left" aria-hidden="true"></i>
+										Donec suscipit vehicula turpis sed lutpat Quisque vitae quam neque. Morbi cilisis placerat dapibus. Etiaes nulla ed leo...
+										</p>
+									</div>
+									<div class="author-item">
+										<h4>John doe</h4>
+										<i>Movie superstar</i>	
+									</div>			
+								</div>
+    						</div>
+    					</div>	
     				</div>
     			</div>	
     		</div>
@@ -393,7 +421,6 @@
     $(document).ready(function() {
      
       var owl = $("#owl-demo");
-     
       owl.owlCarousel({
           items : 1, //10 items above 1000px browser width
           itemsDesktop : [1000,5], //5 items between 1000px and 901px
@@ -414,6 +441,27 @@
       })
       $(".stop").click(function(){
         owl.trigger('owl.stop');
+      })
+     
+    });
+
+    $(document).ready(function() {
+     
+      var owl = $("#owl-demo-1");
+      owl.owlCarousel({
+          items : 1, //10 items above 1000px browser width
+          itemsDesktop : [1000,5], //5 items between 1000px and 901px
+          itemsDesktopSmall : [900,3], // betweem 900px and 601px
+          itemsTablet: [600,2], //2 items between 600 and 0
+          itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      });
+     
+      // Custom Navigation Events
+      $(".next-1").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev-1").click(function(){
+        owl.trigger('owl.prev');
       })
      
     });
