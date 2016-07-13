@@ -72,8 +72,7 @@
     <!--end of navigation-->
     <!--slider here-->
     <header id="slider">
-    	<div class="container">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -85,71 +84,87 @@
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
 						<img src="images/slider.png" alt="Chania">
-						<div class="carousel-caption">
-							<h2>
-								<img src="images/group-2.png"><br>
-								WE TRULY<br>
-								BELIVE HAIRCUT<br>
-								MATTERS<br>
-								<img src="images/group-1.png">
-							</h2>	
-						</div>
+						<div  class="container">
+								<div class="carousel-caption">
+									<h2>
+									<img src="images/group-2.png"><br>
+									WE TRULY<br>
+									BELIVE HAIRCUT<br>
+									MATTERS<br>
+									<img src="images/group-1.png">
+									</h2>	
+								</div>	
+						</div>	
 					</div>
 					<div class="item">
 						<img src="images/slider.png" alt="Chania">
-						<div class="carousel-caption">
-							<h2>
-								<img src="images/group-2.png"><br>
-								WE TRULY<br>
-								BELIVE HAIRCUT<br>
-								MATTERS<br>
-								<img src="images/group-1.png">
-							</h2>	
+						<div  class="container">
+								<div class="carousel-caption">
+									<h2>
+									<img src="images/group-2.png"><br>
+									WE TRULY<br>
+									BELIVE HAIRCUT<br>
+									MATTERS<br>
+									<img src="images/group-1.png">
+									</h2>	
+								</div>	
 						</div>
 					</div>
 					<div class="item">
 						<img src="images/slider.png" alt="Flower">
-						<div class="carousel-caption">
-							<h2>
-								<img src="images/group-2.png"><br>
-								WE TRULY<br>
-								BELIVE HAIRCUT<br>
-								MATTERS<br>
-								<img src="images/group-1.png">
-							</h2>	
+						<div  class="container">
+								<div class="carousel-caption">
+									<h2>
+									<img src="images/group-2.png"><br>
+									WE TRULY<br>
+									BELIVE HAIRCUT<br>
+									MATTERS<br>
+									<img src="images/group-1.png">
+									</h2>	
+								</div>
+						</div>
+					</div>	
+				</div>
+				<!-- Left and right controls -->		
+		</div>
+		<div class="container-fluid">
+			<div class="container">
+					<div class="controls">
+						<a class="left-control" href="#myCarousel" role="button" data-slide="prev">
+						<span><img src="images/left.png"></span>	
+						</a>
+						<a class="right-control" href="#myCarousel" role="button" data-slide="next">
+						<span><img src="images/right.png"></span>
+						</a>	
+					</div>
+					<div class="right-slider">
+						<img src="images/open.png">
+						<div class="right-slider-inner">
+							<span>OPENING TIME</span>
+							<ul>
+								<li><a href="#">Monday</a><a class="time">9:00-18:00</a></li>
+								<li class="odd"><a href="#">Tuesday</a><a class="time">9:00-18:00</a></li>
+								<li><a class="current" href="#">Wednesday</a><a class="time">9:00-18:00</a></li>
+								<li class="odd"><a href="#">Thursday</a><a class="time">9:00-18:00</a></li>
+								<li><a href="#">Friday</a><a class="time">9:00-18:00</a></li>
+								<li class="odd"><a href="#">Sartuday</a><a class="time">9:00-18:00</a></li>
+								<li><a href="#">Sunday</a><a class="time">CLOSED</a></li>
+							</ul>
 						</div>
 					</div>
-
-				</div>
-				<!-- Left and right controls -->
-				<div class="controls">
-					<a class="left-control" href="#myCarousel" role="button" data-slide="prev">
-						<span><img src="images/left.png"></span>	
-					</a>
-					<a class="right-control" href="#myCarousel" role="button" data-slide="next">
-						<span><img src="images/right.png"></span>
-					</a>	
-				</div>
-				
+					<div class="header-socials">
+						<div class="social-item">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</div>
+						<div class="social-item">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</div>
+						<div class="social-item">
+							<i class="fa fa-youtube" aria-hidden="true"></i>
+						</div>	
+					</div>	
 			</div>
-			
-			<!--open time-->
-			<div class="right-slider">
-					<img src="images/open.png">
-					<div class="right-slider-inner">
-						<span>OPENING TIME</span>
-						<ul>
-							<li><a href="#">Monday</a><a class="time">9:00-18:00</a></li>
-							<li class="odd"><a href="#">Tuesday</a><a class="time">9:00-18:00</a></li>
-							<li><a class="current" href="#">Wednesday</a><a class="time">9:00-18:00</a></li>
-							<li class="odd"><a href="#">Thursday</a><a class="time">9:00-18:00</a></li>
-							<li><a href="#">Friday</a><a class="time">9:00-18:00</a></li>
-							<li class="odd"><a href="#">Sartuday</a><a class="time">9:00-18:00</a></li>
-							<li><a href="#">Sunday</a><a class="time">CLOSED</a></li>
-						</ul>
-					</div>
-			</div>
-    	</div>
+		</div>
     </header>
     <!--end of slider-->
     <!--Our service here-->
@@ -814,27 +829,6 @@
       })
      
     });
-//      if ($('#back-to-top').length) {
-//     var scrollTrigger = 100, // px
-//         backToTop = function () {
-//             var scrollTop = $(window).scrollTop();
-//             if (scrollTop > scrollTrigger) {
-//                 $('#back-to-top').addClass('show');
-//             } else {
-//                 $('#back-to-top').removeClass('show');
-//             }
-//         };
-//     backToTop();
-//     $(window).on('scroll', function () {
-//         backToTop();
-//     });
-//     $('#back-to-top').on('click', function (e) {
-//         e.preventDefault();
-//         $('html,body').animate({
-//             scrollTop: 0
-//         }, 700);
-//     });
-// }
 $(document).ready(function(){
 
 	// hide #back-top first

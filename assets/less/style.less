@@ -19,62 +19,99 @@ section{
 }
 /*css for header*/
 #slider{	
-			.controls{
-			position: absolute;
-			top: 410px;
-			left: 0px;
-			z-index: 1000;
-			a.left-control{
-				text-decoration: none !important;	
-			}
-			a.left-control:hover{
-				text-decoration: none !important;
-			}	
-	}		
-	.right-slider{
-		float: right;
+	position: relative;
+	.container-fluid{
 		position: absolute;
-		top: 120px;
-		right: 105px;
-		img{
+		top: 0;left: 0;right: 0;bottom: 0;
+		.container{
+			position: relative;
+			height: 100%;
+			.controls{
+				position: absolute;
+				top: 65%;
+				z-index: 1000;
+				a.left-control{
+					text-decoration: none !important;	
+				}
+				a.left-control:hover{
+					text-decoration: none !important;
+				}	
+			}	
+			.right-slider{
 			float: right;
-			right: 110px;
-			padding-right: 5px;
-		}
-		span{
-			width: 215px;
-			font-size: 18px;
-			background-color: #303030;
-			color: white;
-			padding: 10px;
-			padding-left: 42px;	
-			padding-right: 42px;
-			border-bottom: 1px solid black;
-		}
-		ul{
-			width: 215px;
-			border: 5px solid #303030;
-
-			li{
-				list-style-type: none;
-				padding: 10px;
-				margin-left: -40px;
-				background-color: #303030;
-
-				a{
-					color: white;
-					font-size: 12px;
-				}
-				a.time{
+			position: absolute;
+			right: 0px;
+			top: 20%;
+				.right-slider-inner{
+					position: absolute;
 					float: right;
-					color: #505050;
-				}
-				a.current{
-					color: #6e519b;
-				}
+					img{
+						float: right;
+						right: 110px;
+						padding-right: 5px;
+						
+					}
+					span{
+						width: 215px;
+						font-size: 18px;
+						background-color: #303030;
+						color: white;
+						padding: 10px;
+						padding-left: 42px;	
+						padding-right: 42px;
+						border-bottom: 1px solid black;
+					}
+					ul{
+						width: 215px;
+						border: 5px solid #303030;
+
+						li{
+							list-style-type: none;
+							padding: 10px;
+							margin-left: -40px;
+							background-color: #303030;
+
+							a{
+								color: white;
+								font-size: 12px;
+							}
+							a.time{
+								float: right;
+								color: #505050;
+							}
+							a.current{
+								color: #6e519b;
+							}
+						}
+						li.odd{
+							background-color: #212121;
+						}
+					}
+				}	
 			}
-			li.odd{
-				background-color: #212121;
+			.header-socials{
+			position: absolute;
+			float: right;
+			display: flex;
+			flex-directin: row;
+			right: 0px;
+			top: 90%;
+				.social-item{
+					background-color: #303030;
+						margin-left: 20px;
+						padding: 5px;
+					i{
+						font-size: 22px;	
+						color: white;
+						&:hover{
+							color: #00bff3;
+						}	
+					}
+					i.fa-facebook{
+						padding-left: 3px;
+						padding-right: 3px;
+					}
+				}	
 			}
 		}
 	}
@@ -95,7 +132,9 @@ section{
 }
 /*css for service here*/
 #services{
+	background: url("../images/bg-service.png") no-repeat;
 	.service-heading{
+
 		.heading();
 	}
 	.service-item{
