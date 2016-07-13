@@ -9,11 +9,29 @@ section{
 	 src: url('../fonts/LeagueGothic-Regular.otf');
 }
 /*css for navbar*/
+.navbar-default .navbar-nav > .open > a{
+    background-color: rgba(12, 8, 8, 0.74) !important;
+    color: white !important;
+}
+.navbar-default .navbar-nav > .open > a:hover{
+    background-color: rgba(12, 8, 8, 0.74) !important;
+    color: white !important;
+}
+
 .navbar-nav > li.make-apoint{
 	background-color: #7c5cad;
 	padding-bottom: 0px;
 	border-radius: 5px;
 }
+/*add css for dropdown menu*/
+.navbar-nav > li > .dropdown-menu{
+    margin-top:  5px !important;
+}
+.dropdown-menu li hr{
+    margin: 0 !important;
+   border-top: 1px solid grey !important;
+}
+
 @media screen and (max-width: 1024px) {
 	.navbar-toggle
 }
@@ -165,7 +183,7 @@ section{
         right: 0;
         bottom: 0;
         opacity: 0.5;
-        transition: all 1s;
+        transition: all 2s;
     }
     .sv-image:hover:before{
         display: block;
@@ -173,6 +191,7 @@ section{
     }
    .sv-image:hover .sv-hover-inner{
         display: block;
+        transition: all 2s;
     }
         
     .sv-hover-inner{

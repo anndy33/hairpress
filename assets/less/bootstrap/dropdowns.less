@@ -40,12 +40,16 @@
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  background-color: @dropdown-bg;
+  // background-color: @dropdown-bg;
   border: 1px solid @dropdown-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-border;
   border-radius: @border-radius-base;
   .box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
+  /*add css style for dropdown menu*/
+  background-color: #2d2d2d;
+  opacity: 0.7;
+  margin-top: 5px;
 
   // Aligns the dropdown menu to right
   //
@@ -63,12 +67,19 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 3px 20px;
+    text-transform: uppercase;
+    // padding: 3px 20px;
     clear: both;
-    font-weight: normal;
+    // font-weight: normal;
     line-height: @line-height-base;
-    color: @dropdown-link-color;
+    // color: @dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+    color: white;
+    font-weight: bold; 
+    padding-left: 20px;
+    padding-right: 40px; 
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -77,8 +88,9 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    color: @dropdown-link-hover-color;
-    background-color: @dropdown-link-hover-bg;
+    // color: @dropdown-link-hover-color;
+    // background-color: @dropdown-link-hover-bg;
+   color: #7859a8;
   }
 }
 
@@ -87,10 +99,10 @@
   &,
   &:hover,
   &:focus {
-    color: @dropdown-link-active-color;
+    // color: @dropdown-link-active-color;
     text-decoration: none;
     outline: 0;
-    background-color: @dropdown-link-active-bg;
+    // background-color: @dropdown-link-active-bg;
   }
 }
 
@@ -134,8 +146,8 @@
 // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
 // menu with the parent.
 .dropdown-menu-right {
-  left: auto; // Reset the default from `.dropdown-menu`
-  right: 0;
+  // left: auto; // Reset the default from `.dropdown-menu`
+  // right: 0;
 }
 // With v3, we enabled auto-flipping if you have a dropdown within a right
 // aligned nav component. To enable the undoing of that, we provide an override
