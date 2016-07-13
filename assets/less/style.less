@@ -134,14 +134,15 @@ section{
 #services{
 	background: url("../images/bg-service.png") no-repeat;
 	.service-heading{
-
 		.heading();
 	}
 	.service-item{
-		img{
-			margin-bottom: 20px;
-		}
+        .sv-image{
+            position: relative;
+            margin-bottom: 20px;
+        }    
 		span{
+            margin-top: 20px;
 			font-size: 16px;
 			font-weight: bold;
 		}
@@ -152,8 +153,42 @@ section{
 				color: #8a6eb9;
 				font-weight: bold;
 			}
-		}
+		}   
 	}
+    .sv-image::before{
+        content: "";
+        background-color: #636161;
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.5;
+        transition: all 1s;
+    }
+    .sv-image:hover:before{
+        display: block;
+
+    }
+   .sv-image:hover .sv-hover-inner{
+        display: block;
+    }
+        
+    .sv-hover-inner{
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        display: none;
+            a{
+                padding: 10px;
+                background-color: black;
+                color: white;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
 }
 /*css for lastest new*/
 #news{
