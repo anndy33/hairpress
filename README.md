@@ -72,3 +72,8 @@ gulp
 #### Special Thanks
 
 To Kenny Song for his contributions and https://github.com/baivong
+----------------------NOTICES----------------------------
+Every js file which take from others will be saved in libs(assets)
+every js which are wrote will be save in custom1.js or custom2.js(assets)
+In html file, we need to call js or css files only from build folder
+every js files from assets will be compiled to scripts.min.js and style.css in build folder, therefore, only need to call js and css files from build folder
