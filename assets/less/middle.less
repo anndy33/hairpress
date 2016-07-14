@@ -1,0 +1,41 @@
+@font-face{
+	font-family: "LeagueGothic-Regular";
+	 src: url('../fonts/LeagueGothic-Regular.otf');
+}
+#middle{
+	background: url("../images/contact-bg.png")  center center/cover;
+	.left-middle{
+		margin-top: 100px;
+		margin-bottom: 80px;
+		span{
+		font-size: 80px;
+		font-family: "LeagueGothic-Regular";
+		text-transform: uppercase;
+		}
+	}
+	.right-middle{
+		margin-top: 220px;
+		.header-socials{
+			position: absolute;
+			float: right;
+			display: flex;
+			flex-directin: row;
+			.social-item{
+				background-color: #303030;
+					margin-left: 20px;
+					padding: 5px;
+				i{
+					font-size: 22px;	
+					color: white;
+					&:hover{
+						color: #00bff3;
+					}	
+				}
+				i.fa-facebook{
+					padding-left: 3px;
+					padding-right: 3px;
+				}
+			}	
+		}
+	}
+}
