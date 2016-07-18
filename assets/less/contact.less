@@ -1,0 +1,91 @@
+@import "function.less";
+#contact-breadcrumb{
+	padding-top: 10px;
+	background-color: #fff !important;
+}
+#contact-item{
+	background: url("../images/bg-service.png") no-repeat;
+	margin-bottom: 100px;
+	.contact-item-left{
+		.ct-item-left-heading{
+			.item-heading();
+			h4{
+				.right-sub-heading();
+			}
+		}
+	}
+	.contact-infor{
+		margin-top: 20px;
+		p{
+			font-size: 12px;
+			color: grey;
+			margin-bottom: 20px;
+			b{
+				color: black;
+			}
+			a{
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #ac6ed4;
+				font-weight: bold;
+			}
+		}
+	}
+	.contact-form{
+		.ct-form-heading{
+			.item-heading();
+			h4{
+				.right-sub-heading();
+			}
+		}
+		.ct-form-item{
+			margin-top: 20px;	
+			display: flex;
+			flex-direction: row;
+			// justify-content:         space-between;
+			.ct-item-inner{
+				margin-right: 100px;
+				label{
+					font-size: 12px;
+				}
+				form{
+					input{
+						width: 145%;
+						height: 40px;
+						// border-color: grey;
+						border: 1px solid grey;
+					}
+				}
+			}
+		}
+		.message-item{
+			margin-top: 20px;
+			label{
+				font-size: 12px;
+
+			}
+			form{
+				input{
+					height: 190px;
+					width: 95%;
+					border: 1px solid grey;
+				}
+			}
+		}
+		.ct-send{
+			float: right;
+			margin-top: 20px;
+			margin-right: 35px;
+			input{
+				padding: 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+			background-color: #59417d;
+			color: white;
+			font-weight: bold;
+			border: none !important;
+			}
+			
+		}
+	}
+}

@@ -89,4 +89,7 @@ console.log('script from custom 1');
 				return false;
 			});
 		});
+    //js for isotope
+    
+
  });
