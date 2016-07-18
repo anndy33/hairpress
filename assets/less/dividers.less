@@ -1,0 +1,130 @@
+@import "function.less";
+#heading{
+	background: url("../images/bg-service.png") no-repeat;
+	.heading-title{
+		.item-heading();
+		h4{
+			.right-sub-heading();
+		}
+	}
+	.heading-item{
+		margin-top: 30px;
+		p{
+			font-size: 12px;
+			color: #727272;
+			line-height: 170%;
+		}
+	}
+	.divider-seperator{
+		.seperator();
+	}
+}
+/*css for gallery */
+#gallery-divider{
+	.menu-column{
+		border: 1px solid #dddddd;
+		padding-left: 30px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-color: #faf9f9;
+		.menu-title{
+			span{
+				font-size: 14px;
+			}
+			img{
+				padding-top: 30px;
+			}
+		}
+		ul.inner-menu{
+			margin-left: -70px;
+			li{	
+				position: relative;
+				list-style-type: none;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				a{
+					font-size: 12px;
+					font-weight: bold;
+					text-decoration: none;
+					padding-left: 30px;
+					color: #727272;
+					&:hover{
+						color: #7859a8;
+					}
+				}
+				&:before{
+				content: '';
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				bottom: 0px;
+				width:0px;
+				left: 100%;
+				opacity: 0;
+				border-bottom:20px solid transparent;
+				border-top:20px solid transparent;
+				border-left:10px solid #644a8e; /* Tam giác trái được đổ màu */
+				}
+				&:hover{
+
+				background-color: #644a8e;
+					a{
+						color: white;
+					}
+					&:before{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	.gallery-title{
+		.item-heading();
+		h4{
+			.right-sub-heading();
+		}
+		.gallery-seperator{
+			.seperator();
+		}
+	}
+	.gallery-subtitle{
+		.sub-title();
+	}
+	.grid{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		.grid-item{
+			margin-right: 50px;
+			margin-bottom: 50px;
+		}
+	}
+	.grid-item::before{
+		content: "";
+		background-color: #0b0806;
+		position: absolute;
+		opacity: 0.5;
+		display:none;
+	  	transition: all 1s;
+	  	height: 92px;
+	  	width: 92px;
+	}
+	.grid-item:hover:before{
+		display: block;
+	 	transition: all 1s;
+	}
+	.grid-item:hover .hover-gallery-item{
+		display: block;
+	}
+	.hover-gallery-item{
+				position:absolute;
+				top: 40%;
+				left: 45%;
+				display: none;		
+				i{
+					color: white;
+					text-align: center;
+					font-size: 20px;
+				}
+			}
+}
