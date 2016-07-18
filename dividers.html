@@ -302,7 +302,7 @@
     						<span><b>Gallery</b></span><br>
     						<img src="images/short-seperator.png">
     					</div>
-    					<ul class="inner-menu"> 
+    					<!-- <ul class="inner-menu"> 
 							<li class="active" data-filter="* class="asas" "/><a href="#">All</a></li>
 							<li  data-filter=".2005"/><a class="asas"  href="#">Season 2005</a></li>
 							<li  data-filter=".2006"/><a class="asas"  href="#">Season 2006</a></li>
@@ -311,8 +311,8 @@
 							<li  data-filter=".2009"/><a class="asas"  href="#">Season 2009</a></li>
 							<li  data-filter=".2010"/><a class="asas"  href="#">Season 2010</a></li>
 							<li  data-filter=".2011"/><a class="asas"  href="#">Season 2011</a></li>
-    					</ul>
-						<!-- <ul class="nav nav-tabs">
+    					</ul> -->
+						<ul class="nav nav-tabs">
 							<li class="active"><a data-toggle="tab" href="#home">Season 2005</a></li>
 							<li><a data-toggle="tab" href="#2006">Season 2006</a></li>
 							<li><a data-toggle="tab" href="#2007">Season 2007</a></li>
@@ -320,7 +320,7 @@
 							<li><a data-toggle="tab" href="#2009">Season 2009</a></li>
 							<li><a data-toggle="tab" href="#2010">Season 2010</a></li>
 							<li><a data-toggle="tab" href="#2011">Season 2011</a></li>
-						</ul> -->
+						</ul>
     				</div>
     			</div>	
     			<div class="col-md-9">
@@ -388,69 +388,6 @@
 	<script src="build/jquery-1.9.1.min.js"></script>
 	<script src="build/jquery.plugins.min.js"></script>	
 	<script src="assets/js/libs/bootstrap-hover-dropdown.js"></script>
-	<script src="build/scripts.min.js"></script>
-	<script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
-	<script>
-
-
-		 $(".grid").isotope({
-                      itemSelector: '.grid-item',
-                      layoutMode: 'fitRows',
-                   });
-
-                   $('.inner-menu li').click(function(){
-                     $('.inner-menu li').removeClass('active');
-                     $(this).addClass('active');
-
-                     var selector =$(this).attr('data-filter');
-                     $(".grid").isotope({
-                       filter: selector,
-                       animationOption: {
-                         duration: 750,
-                         easing: 'linear',
-                         queue: false,
-                       }
-                     });
-                       return false;
-                   });
-                   
-                   	 $('.asas').eq(0).click(function(){
-                   		var name =$ (".asas").eq(0).text();
-                   		$('.gallery-title').text(name);
-                  
-                   	})
-                   	 $('.asas').eq(1).click(function(){
-                   		var name =$ (".asas").eq(1).text();
-                   		$('.gallery-title').text(name);
-                   		
-                   	})
-                   	 $('.asas').eq(2).click(function(){
-                   		var name =$ (".asas").eq(2).text();
-                   		$('.gallery-title').text(name);
-                   		alert(name);
-                   	})
-                   	 $('.asas').eq(3).click(function(){
-                   		var name =$ (".asas").eq(3).text();
-                   		$('.gallery-title').text(name);
-                   		alert(name);
-                   	})
-                   	 $('.asas').eq(4).click(function(){
-                   		var name =$ (".asas").eq(4).text();
-                   		$('.gallery-title').text(name);
-                   		alert(name);
-                   	})
-                   	 $('.asas').eq(5).click(function(){
-                   		var name =$ (".asas").eq(5).text();
-                   		$('.gallery-title').text(name);
-                   		alert(name);
-                   	})
-                   	 $('.asas').eq(6).click(function(){
-                   		var name =$ (".asas").eq(6).text();
-                   		$('.gallery-title').text(name);
-                   		alert(name);
-                   	})
-                   
-                  
-	</script>
+	<script src="build/scripts.min.js"></script>	
 </body>
 </html>
