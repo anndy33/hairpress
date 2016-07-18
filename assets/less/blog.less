@@ -1,15 +1,10 @@
+@import "function.less";
 #blog-breadcrumb{
 	padding-top: 10px;
 	background-color: #f8f8f8 !important;
 	border-bottom: 1px solid #e5e5e5;
 }
-.item-heading(){
-	span{
-			font-size: 18px;
-			text-transform: uppercase;
-			color: black;
-		}
-}
+
 .sub-heading(){
 	display: flex;
 		flex-direction: row;
@@ -23,6 +18,7 @@
 }
 #blog-item1{
 	margin-bottom: 300px;
+	background: url("../images/bg-service.png") no-repeat;
 	/*css for left item of blog*/
 	.item1-heading{
 		.item-heading();
@@ -31,6 +27,9 @@
 		.sub-heading();
 		padding-bottom: 20px;
 		padding-top: 10px;
+	}
+	.blog-seperator{
+		.seperator();
 	}
 	.blog-item-inner{
 		padding-top: 20px;
@@ -41,14 +40,13 @@
 			font-size: 12px;
 			color: grey;
 			overflow: hidden;
-			width: 55%;
+			width: 60%;
 			line-height: 150%;
 		}
 		img{
 			float: right;
-			height: 180px;	
-			margin-left: 15px;
-			width: auto;
+			width: 35%;
+			margin-left: 40px;
 		}
 	}
 	.blog-item-inner-1{
@@ -56,7 +54,8 @@
 		p{
 			font-size: 12px;
 			color: grey;
-			width: 88%;
+			width: 100%;
+			line-height: 200%;	
 		}
 		.row-image-inner{
 			padding-top: 20px;
@@ -75,13 +74,10 @@
 	.end-item{
 		margin-top: 30px;
 		margin-bottom: 30px;
+		.seperator();
 	}
 	/*css for right item of blog*/
-	.right-sub-heading(){
-		font-size: 12px;
-		color: grey;
-		padding-bottom: 15px;		
-	}
+	
 	.search-item{
 		.search-item-heading{
 			.item-heading();
@@ -94,7 +90,7 @@
 			padding-top: 20px;
 			position: relative;
 			input{
-				width: 84%;
+				width: 100%;
 				height: 40px;
 				border-radius: 3px;
 				border: 1px solid grey !important;
@@ -107,8 +103,8 @@
 				text-transform: uppercase;
 				color: white;
 				font-weight: bold;
-				right: 17%;
-				top: 39%;
+				right: 2%;
+				top: 38%;
 				border-radius: 2px;
 
 			}
@@ -128,7 +124,6 @@
 			p{
 				font-size: 12px;
 				color: #694d94;
-				width: 90%;
 				overflow: hidden;
 				span{
 					font-weight: bold;
