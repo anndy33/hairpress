@@ -20,39 +20,31 @@
 	}
 }
 /*css for gallery */
-#gallery-divider{
+.gallery-divider{
+	/*style for the left menu*/
 	.menu-column{
 		border: 1px solid #dddddd;
 		padding-left: 30px;
 		padding-top: 30px;
 		padding-bottom: 30px;
 		background-color: #faf9f9;
-		.menu-title{
-			span{
-				font-size: 14px;
-			}
-			img{
-				padding-top: 30px;
-			}
+		.nav-tabs{
+			border-bottom: none;
 		}
-		ul.inner-menu{
-			margin-left: -70px;
-			li{	
-				position: relative;
-				list-style-type: none;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				a{
-					font-size: 12px;
-					font-weight: bold;
-					text-decoration: none;
-					padding-left: 30px;
-					color: #727272;
-					&:hover{
-						color: #7859a8;
-					}
-				}
-				&:before{
+		.nav-tabs > li{
+			float: inherit;
+			position: relative;
+
+		}
+		.nav-tabs > li > a{
+			border-radius: 0 !important;
+			margin-right: 0;
+			padding-left: 0;
+			font-size: 12px;
+			border: none;	
+			color:  #727272;
+			font-weight: bold;
+			&:before{
 				content: '';
 				width: 0px;
 				height: 0px;
@@ -61,70 +53,234 @@
 				width:0px;
 				left: 100%;
 				opacity: 0;
-				border-bottom:20px solid transparent;
-				border-top:20px solid transparent;
+				border-bottom:19px solid transparent;
+				border-top:19px solid transparent;
 				border-left:10px solid #644a8e; /* Tam giác trái được đổ màu */
 				}
 				&:hover{
-
-				background-color: #644a8e;
-					a{
-						color: white;
+					background-color: #644a8e;
+					color: white !important;
+					&:before{
+						opacity: 1;
 					}
+				}
+		}
+		.nav-tabs > li.active > a{
+			background-color: #faf9f9;
+			padding-left: 0;
+			color:  #727272;
+			font-size: 12px;
+			border: none;	
+
+			&:hover{
+				color: #fff;
+			}
+		}
+		.nav-tabs > li.active > a:hover{
+			background-color: #644a8e;
+		}
+		.menu-title{
+			span{
+				font-size: 14px;
+			}
+			img{
+				padding-top: 30px;
+			}
+		}
+	}
+	/*style for the right menu*/
+	.menu-column-right ul.nav-tabs{
+		margin-left: -30px !important;
+	}
+	.menu-column-right{
+		border: 1px solid #dddddd;
+		padding-left: 30px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		background-color: #faf9f9;
+		.nav-tabs{
+			border-bottom: none;
+		}
+		.nav-tabs > li{
+			float: inherit;
+			position: relative;
+
+		}
+		.nav-tabs > li > a{
+			border-radius: 0 !important;
+			margin-right: 0;
+			padding-left: 30px;
+			font-size: 12px;
+			border: none;	
+			color:  #727272;
+			font-weight: bold;
+			&:before{
+				content: '';
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				bottom: 0px;
+				width:0px;
+				right: 100%;
+				opacity: 0;
+				border-bottom:19px solid transparent;
+				border-top:19px solid transparent;
+				border-right:10px solid #644a8e; /* Tam giác phải được đổ màu */
+
+				}
+				&:hover{
+					background-color: #644a8e;
+					color: white !important;
 					&:before{
 						opacity: 1;
 					}
 				}
 			}
+		.nav-tabs > li.active > a{
+			background-color: #faf9f9;
+			padding-left: 0;
+			color:  #727272;
+			font-size: 12px;
+			border: none;	
+			padding-left: 30px;
+			&:hover{
+				color: #fff;
+			}
+		}
+		.nav-tabs > li.active > a:hover{
+			background-color: #644a8e;
+		}
+		.menu-title{
+			span{
+				font-size: 14px;
+			}
+			img{
+				padding-top: 30px;
+			}
 		}
 	}
-	.gallery-title{
-		.item-heading();
-		h4{
-			.right-sub-heading();
-		}
-		.gallery-seperator{
-			.seperator();
-		}
-	}
-	.gallery-subtitle{
-		.sub-title();
-	}
-	.grid{
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		.grid-item{
-			margin-right: 50px;
-			margin-bottom: 50px;
-		}
-	}
-	.grid-item::before{
-		content: "";
-		background-color: #0b0806;
-		position: absolute;
-		opacity: 0.5;
-		display:none;
-	  	transition: all 1s;
-	  	height: 92px;
-	  	width: 92px;
-	}
-	.grid-item:hover:before{
-		display: block;
-	 	transition: all 1s;
-	}
-	.grid-item:hover .hover-gallery-item{
-		display: block;
-	}
-	.hover-gallery-item{
-				position:absolute;
-				top: 40%;
-				left: 45%;
-				display: none;		
-				i{
-					color: white;
-					text-align: center;
-					font-size: 20px;
+	.tab-content{
+		.tab-pane{
+			.gallery-title{
+				.item-heading();
+				h4{
+					.right-sub-heading();
+				}
+				.gallery-seperator{
+					.seperator();
 				}
 			}
+			.gallery-subtitle{
+				.sub-title();
+			}
+			.grid{
+				display: flex;
+				flex-direction: row;
+				flex-wrap:         wrap;
+				.grid-item{
+					margin-right: 50px;
+					margin-bottom: 50px;
+					position: relative;
+				}
+				.grid-item::before{
+					content: "";
+					background-color: #0b0806;
+					position: absolute;
+					opacity: 0.5;
+					display:none;
+				  	transition: all 1s;
+				  	height: 92px;
+				  	width: 92px;
+				}
+				.grid-item:hover:before{
+					display: block;
+				 	transition: all 1s;
+				}
+				.grid-item:hover .hover-gallery-item{
+					display: block;
+				}
+				.hover-gallery-item{
+					position:absolute;
+					top: 35%;
+					left: 40%;
+					display: none;		
+					i{
+						color: white;
+						text-align: center;
+						font-size: 20px;
+					}
+				}
+			}			
+		}
+	}	
+	.end-gallery{
+		.seperator();
+	}
+}
+/*style for row tab*/
+#row-tab{
+	.end-gallery{
+		.seperator();
+	}
+	.tab-content{
+		margin-top: 0px;
+		margin-bottom: 50px;
+		p{
+			font-size: 12px;
+			color: #727272;
+			line-height: 200%;
+			word-spacing: 0.2em;
+			letter-spacing: 0.3px;
+			border: 1px solid #ececec;
+			padding: 20px;
+		}
+	}
+	.row-menu{
+		.nav-tabs{
+			border-bottom: none;
+		}
+		.nav-tabs > li.active > a{
+			background-color: #fff;
+			border: none;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		.nav-tabs > li.active > a:hover{
+			background-color: #644a8e;
+		}
+		.nav-tabs > li{
+			float: left;
+			position: relative;
+
+		}
+		.nav-tabs > li > a{
+			border-radius: 0 !important;
+			font-size: 14px;
+			border: none;	
+			color:  #000;
+			font-weight: bold;
+			&:before{
+				content: '';
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				bottom: 0px;
+				top: 100%;
+				width:0px;
+				right: 0;
+				opacity: 0;
+				border-left:33px solid transparent;
+				border-right:33px solid transparent;
+				border-top:15px solid #644a8e; /* Tam giác phải được đổ màu */
+
+				}
+				&:hover{
+					background-color: #644a8e;
+					color: white !important;
+					&:before{
+						opacity: 1;
+					}
+				}
+			}
+	}
 }
