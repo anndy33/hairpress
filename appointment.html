@@ -191,7 +191,15 @@
 							</div>
 						</div>	
 						<div class="app-date">
-							<label>Date*</label>	
+							<label>Date*</label>
+							<div class="form-group">
+								<div class='input-group date' id='datetimepicker1'>
+									<input type='text' class="form-control" />
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+							</div>	
 						</div>					
 					</div>
 				</div>
@@ -203,5 +211,10 @@
 	<script src="build/jquery.plugins.min.js"></script>	
 	<script src="assets/js/libs/bootstrap-hover-dropdown.js"></script>
 	<script src="build/scripts.min.js"></script>	
+	<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
 </body>
 </html>
