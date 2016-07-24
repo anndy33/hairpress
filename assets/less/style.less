@@ -22,10 +22,11 @@ nav{
 }
 
 .navbar-nav > li.make-apoint{
-	// background-color: #7c5cad;
-	padding-bottom: 0px;
-	border-radius: 5px;
-	background: linear-gradient(#7b5bad, #6b4f96, #563f7a);
+	a{
+		background: #7758a6;
+		border-radius: 3px;
+		background: linear-gradient(#7b5bad, #6b4f96, #563f7a);
+	}
 }
 /*add css for dropdown menu*/
 .navbar-nav > li > .dropdown-menu{
@@ -221,6 +222,9 @@ nav{
 }
 /*css for lastest new*/
 #news{
+	img.res-line{
+		display: none;
+	}
 	padding-bottom: 30px;
 	.new-left{
 		display: block;
@@ -703,6 +707,9 @@ nav{
 }
 /*responsive with the size of container: 420px*/
 @media (min-width: 320px) and (max-width : 767px){
+	.navbar-brand{
+		width: 45%;
+	}
 	.navbar-toggle{
 		background-color: #7758a7;
 		background: linear-gradient(#7b5bad, #6b4f96, #563f7a);
@@ -712,9 +719,17 @@ nav{
 		padding-left: 3px;
 		padding-right: 3px;
 	}
-	.navbar-brand>img{
-		width: 85%;
+	.navbar-default .navbar-nav>li>a>i{
+		font-size: 10px;
+		left: 50%;
+		top: 15px;
+		color: #7758a6;
+		font-weight: bold;
 	}
+	li.make-apoint a{
+		text-align: center;
+	}
+
 	#slider .container-fluid .container .controls{
 		display: none;
 	}
@@ -1041,6 +1056,9 @@ nav{
 }
 /*responsive with the size of container: 768px*/
 @media (max-width : 992px) and (min-width: 768px){
+	button.make-apoint{
+		padding: 10px;
+	}
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
 		margin-left: 130%;
 	}
