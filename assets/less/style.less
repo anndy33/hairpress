@@ -160,6 +160,9 @@ nav{
 	.service-heading{
 		.heading();
 	}
+	.accordion-item{
+		display: none;
+	}
 	.service-item{
         .sv-image{
             position: relative;
@@ -218,6 +221,12 @@ nav{
 /*css for lastest new*/
 #news{
 	padding-bottom: 30px;
+	.new-left{
+		display: block;
+	}
+	.news-responsive{
+		display: none;
+	}
 	.new-heading{
 		span{
 			font-size: 20px;
@@ -403,6 +412,7 @@ nav{
 #teams{
 	background-color: #151515;
 	.team-heading{
+		display: block;
 		.heading();
 		text-align: center;
 		span{
@@ -427,6 +437,7 @@ nav{
 		}	
 	}
 	.team-item{
+		display: block;
 		.owl-pagination{
 			display: none !important;
 		}
@@ -459,11 +470,17 @@ nav{
 				}
 			}	
 		}
-		
+	}
+	.team-mobile-respon{
+		display: none;
 	}
 }
 #aboutus{
+	.ab-mobile-res{
+		display: none;
+	}
 	.about-heading{
+		display: block;
 		.heading();
 		button{
 			float: right;
@@ -479,6 +496,7 @@ nav{
 		}
 	}
 	.ab-intro{
+		display: block;
 		padding-top: 20px;
 		padding-bottom: 30px;
 		p{
@@ -492,7 +510,7 @@ nav{
 		display: flex;
 		justify-content:space-between;
 		padding-bottom: 30px;
-
+		display: block;
 	}
 }
 .ft-heading(){
@@ -588,6 +606,9 @@ nav{
 				margin-bottom: 20px;
 			}
 		}
+		.twitter-mobile-line{
+			display: none;
+		}
 	}
 	.ft-contact{
 		.ft-ct-heading{
@@ -653,9 +674,364 @@ nav{
 }
 /*make responsive for home page*/
 
-
+@media (min-width: 450px) and (max-width: 767px){
+	#news .news-responsive .accordion-item{
+		position: relative;	
+	}
+	#news .news-responsive .accordion-item h4{
+		display: block;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: grey;
+		float: right;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: 8px;
+	}
+	img.res-line{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+@media(max-width: 449px){
+	#news .news-responsive .accordion-item h4{
+		display: none;
+	}
+}
 /*responsive with the size of container: 420px*/
-@media (min-width: 320px) and (max-width : 767px){}
+@media (min-width: 320px) and (max-width : 767px){
+	.navbar-toggle>i{
+		font-size: 20px;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	.navbar-brand>img{
+		width: 85%;
+	}
+	#slider .container-fluid .container .controls{
+		display: none;
+	}
+	.carousel-caption{
+		display: none;
+	}
+	#slider .container-fluid .container .right-slider{
+		top: 20%;
+		right: 30px;
+	}
+	.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+		height: 430px;
+	}
+	#slider .container-fluid .container .right-slider .right-slider-inner ul li{
+		padding: 5px;
+	}
+	#slider .container-fluid .container .right-slider .right-slider-inner ul{
+		width: 200px;
+	}
+	#slider .container-fluid .container .right-slider .right-slider-inner ul li a{
+		font-size: 11px;
+	}
+	#slider .container-fluid .container .right-slider .right-slider-inner span{
+		font-size: 16px;
+	}
+	#slider .container-fluid .container .header-socials{
+		right: 65px;
+	}
+	#services{
+		background: none;
+	}
+	#services .service-heading span{
+		font-size: 18px;
+	}
+	#services .service-item .sv-image{
+		display: none;
+	}
+	#services .service-heading p{
+		font-size: 12px;
+	}
+	.service-item{
+		display: none;
+	}
+	#services{
+		.accordion-item{
+			display: block;
+			button.accordion {
+				background-color: #fff;
+			    color: #444;
+			    cursor: pointer;
+			    width: 30%;
+			    border: none;
+			    text-align: left;
+			    outline: none;
+			    font-size: 20px;
+			    transition: 0.4s;
+			    position: relative;
+			    padding-left: inherit;
+			    margin-top: 10px;
+			    h3{
+			    	font-size: 14px;
+			    	margin-left: 50px;
+			    	color: #000;
+			    	font-weight: bold;
+			    	position: absolute;
+			    	margin-top: 5px;
+			    }
+			}
+			button.accordion.active, button.accordion:hover {
+	   			 h3{
+	   			 	color: #805fb3;
+	   			 }
+			}
+			button.accordion:after {
+			    content: '\02795';
+			    font-size: 20px;
+			    color: #fff;
+			    float: left;
+			    background-color: #000;
+			    padding-left: 5px;
+			    padding-right: 5px;
+			    border-radius: 3px;
+			}
+			button.accordion:hover:after{
+				background-color: #805fb3;
+			}
+			button.accordion.active:after {
+	   		 content: "\2796";
+	   		 background-color: #805fb3;
+			}
+			button.accordion.active:hover:after{
+				background-color: #805fb3;
+			}
+			div.panel {
+			    background-color: white;
+			    max-height: 0;
+			    overflow: hidden; 
+			    transition: 0.6s ease-in-out;
+			    opacity: 0;
+			    margin-bottom: 0px;
+			    p{
+			    	color: #727272;
+			    	font-size: 12px;
+			    	padding-bottom: 0px;
+			    }
+				}
+			div.panel.show {
+				    opacity: 1;
+				    max-height: 500px;  
+			}
+		}
+	}
+	#services .accordion-item button.accordion{
+		width: 100%;
+	}
+	.accordion-item{
+		a{
+			color: #805fb3;
+			font-weight: bold;
+		}
+	}
+	#news{
+		padding-top: 20px;
+	}
+	#news .new-heading span{
+		font-size: 18px;
+	}
+	#news .news-left{
+		display: none;
+	}
+	#news .news-responsive{
+		display: block;
+		.accordion-item{
+			display: block;
+			button.accordion {
+				background-color: #fff;
+			    color: #444;
+			    cursor: pointer;
+			    width: 30%;
+			    border: none;
+			    text-align: left;
+			    outline: none;
+			    font-size: 20px;
+			    transition: 0.4s;
+			    position: relative;
+			    padding-left: inherit;
+			    margin-top: 10px;
+			    h3{
+			    	font-size: 14px;
+			    	margin-left: 50px;
+			    	color: #000;
+			    	font-weight: bold;
+			    	position: absolute;
+			    	margin-top: 5px;
+			    }
+			}
+			button.accordion.active, button.accordion:hover {
+	   			 h3{
+	   			 	color: #805fb3;
+	   			 }
+			}
+			button.accordion:after {
+			    content: '\02795';
+			    font-size: 20px;
+			    color: #fff;
+			    float: left;
+			    background-color: #000;
+			    padding-left: 5px;
+			    padding-right: 5px;
+			    border-radius: 3px;
+			}
+			button.accordion:hover:after{
+				background-color: #805fb3;
+			}
+			button.accordion.active:after {
+	   		 content: "\2796";
+	   		 background-color: #805fb3;
+			}
+			button.accordion.active:hover:after{
+				background-color: #805fb3;
+			}
+			div.panel {
+			    background-color: white;
+			    max-height: 0;
+			    overflow: hidden; 
+			    transition: 0.6s ease-in-out;
+			    opacity: 0;
+			    margin-bottom: 0px;
+			    p{
+			    	color: #727272;
+			    	font-size: 12px;
+			    	padding-bottom: 0px;
+			    }
+				}
+			div.panel.show {
+				    opacity: 1;
+				    max-height: 500px;  
+			}
+		}
+	}
+	img.sv-res-line{
+		display: none;
+	}
+	#news .news-responsive .accordion-item button.accordion{
+		width: 100%;
+	}
+	.news-res-heading{
+		span{
+			font-size: 18px;
+		}
+		h4{
+			font-size: 12px;
+			color: grey;
+		}
+	}
+	.view-all{
+			button{
+				text-transform: uppercase;
+				padding: 10px;
+				background-color: #7959a9;
+				border-radius: 5px;
+				border: none;
+				color: #fff;
+				font-weight: bold;
+				box-shadow: inset 0 0 0 1px #563f7a,inset 0 -15px 30px #261247; 
+			}
+	}
+	.view-all button{
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		border-radius: 3px;
+	}
+
+	.gallery{
+		display: none;
+	}
+	#news .testimonials .test-heading .customNavigation i{
+		padding: 13px; 	
+		font-size: 13px;
+	}
+	#teams .team-heading, #teams .team-item{
+		display: none;
+	}
+
+	#teams .team-mobile-respon{
+		display: block;
+		.team-res-heading{
+			span{
+				font-size: 18px;
+				color: #fff;
+				text-transform: uppercase;
+			}
+			h4{
+				font-size: 12px;
+				color: #505050;
+			}
+			img{
+				width: 100%;
+			}
+		}
+		.team-res-item{
+			h4{
+				font-size: 12px;
+				color: #ac6ed4;
+				span{
+					color: #fff;
+					font-style: italic;
+					padding-left: 30px;
+				}
+			}
+			img{
+				width: 100%;
+			}
+		}
+	}
+	#aboutus .about-heading, #aboutus .ab-intro, #aboutus .ab-logo{
+		display: none;
+	}
+	#aboutus .line-ab{
+		display: none;
+	}
+	#aboutus .ab-mobile-res{
+		display: block;
+		.ab-heading-res{
+			span{
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+			h4{
+				font-size: 12px;
+				color: grey;
+			}
+		}
+		.ab-mobile-item{
+			margin-top: 20px;
+			p{
+				font-size: 12px;
+				color: #727272;
+				line-height: 170%;
+			}
+		}
+	}
+	.ft-navigation, .ft-facebook{
+		display: none;
+	}
+	#footer .ft-twitter .ft-tw-heading span{
+		font-size: 18px;
+	}
+	#footer .ft-twitter .ft-tw-heading .customNavigation i{
+		font-size: 13px;
+		padding: 13px;
+	}
+	.twitter-mobile-line{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+	img.res-line{
+		width: 100%;
+	}
+}
 /*responsive with the size of container: 768px*/
 @media (max-width : 992px) and (min-width: 768px){
 	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
@@ -733,7 +1109,22 @@ nav{
 	#ft-below .ft-bl-right p{
 		float: right;
 	}
-
+	#news .gallery .gallery-heading .customNavigation i{
+		padding: 13px; 	
+		font-size: 13px;
+	}
+	#news .testimonials .test-heading .customNavigation i{
+		padding: 13px; 	
+		font-size: 13px;
+	}
+	#teams .team-heading .customNavigation i{
+		padding: 13px; 	
+		font-size: 13px;
+	}
+	#footer .ft-twitter .ft-tw-heading .customNavigation i{
+		padding: 13px; 	
+		font-size: 13px;
+	}
 }
 /*responsive with the size of container: 920px*/
 @media (min-width : 992px) and (max-width: 1140px){
