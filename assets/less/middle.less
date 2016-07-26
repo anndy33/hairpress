@@ -2,11 +2,19 @@
 	font-family: "LeagueGothic-Regular";
 	 src: url('fonts/LeagueGothic-Regular.otf');
 }
+#head{
+	display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 80px;
+
+}
 #middle{
-	background: url("../images/contact-bg.png")  center center/cover;
+	background-color: #eaeae5;
+	// background: url("../images/contact-bg.png")  center center/cover;
 	.left-middle{
 		margin-top: 100px;
-		margin-bottom: 80px;
 		span{
 		font-size: 80px;
 		font-family: "LeagueGothic-Regular";
@@ -14,9 +22,8 @@
 		}
 	}
 	.right-middle{
-		margin-top: 220px;
 		.header-socials{
-			position: absolute;
+			position: static;
 			float: right;
 			display: flex;
 			flex-directin: row;
