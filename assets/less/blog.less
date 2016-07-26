@@ -61,6 +61,7 @@
 		img{
 			float: right;
 			width: 35%;
+			max-height: 200px;
 			margin-left: 40px;
 		}
 	}
@@ -199,5 +200,16 @@
 			
 		}
 
+	}
+}
+@media (max-width: 1200px) {
+	#blog-item1{
+		background: none;
+	}
+}
+
+@media (min-width: 320px) and (max-width : 768px) {
+	.cm-title{
+		span,h3{position: static !important;float: none !important;}
 	}
 }

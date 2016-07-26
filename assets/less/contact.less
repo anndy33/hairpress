@@ -11,8 +11,10 @@
 	
 }
 #contact-item{
-	background: url("../assets/images/bg-service.png") no-repeat;
-	margin-bottom: 100px;
+	background: url(../assets/images/bg-service.png) no-repeat;
+    margin-bottom: 100px;
+    background-size: 70px;
+    background-position: top 30px left;
 	.contact-item-left{
 		.ct-item-left-heading{
 			.item-heading();
@@ -95,5 +97,11 @@
 			}
 			
 		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 992px) {
+	#contact-item{
+		background: none;
 	}
 }
