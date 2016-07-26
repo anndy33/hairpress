@@ -2,7 +2,7 @@
 @import 'bootstrap/bootstrap';
 @font-face{
 	 font-family: "PTSans Bold";
-	  src: url('../build/fonts/PTS75F.ttf');
+	  src: url('../build/fonts/ptSans/PT_Sans-Web-Bold.ttf');
 }
 @font-face{
 	 font-family: "PTSans";
@@ -20,6 +20,23 @@ section{
 @font-face{
 	font-family: "LeagueGothic-Regular";
 	 src: url('../build/fonts/LeagueGothic-Regular.otf');
+}
+.c7{
+	color: #727272;
+}
+.thuong-heading{
+	span{
+		font-family: "PTSans";
+		font-size: 20px;
+		b{
+			font-family: "PTSans Bold";
+		}
+	}
+	h4{
+		font-family: "PTSans";
+		font-size: 13px;
+		color: #999999;
+	}
 }
 /*css for navbar*/
 nav{
@@ -164,7 +181,7 @@ nav{
 			top: 105%;
 				.social-item{
 					background-color: #303030;
-						margin-left: 20px;
+						margin-left: 5px;
 						padding: 5px;
 						height: 30px;
 						width: auto;
@@ -202,6 +219,8 @@ nav{
 /*css for service here*/
 #services{
 	background: url("../assets/images/bg-service.png") no-repeat;
+	background-size: 70px;
+    background-position: top 20px left;
 	.service-heading{
 		.heading();
 	}
@@ -214,6 +233,7 @@ nav{
             margin-bottom: 20px;
         }    
 		span{
+			 font-family: "PTSans Bold";
             margin-top: 20px;
 			font-size: 16px;
 			font-weight: bold;
@@ -471,13 +491,16 @@ nav{
 			padding-top: 6px;
 		}
 		.customNavigation{
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
 			a.btn{
-				padding-bottom: 15px;
+				
 			}				
 			i{
 				border-radius: 3px;
 				padding: 5px;
-				font-size: 10px;
+				font-size: 8px;
 				background-color: #bfbfbf;
 				color: black;
 				text-align: center;
@@ -729,7 +752,7 @@ nav{
 }
 /*make responsive for home page*/
 
-@media (min-width: 450px) and (max-width: 767px){
+@media (min-width: 320px) and (max-width: 767px){
 	#news .news-responsive .accordion-item{
 		position: relative;	
 	}
@@ -786,8 +809,12 @@ nav{
 		display: none;
 	}
 	#slider .container-fluid .container .right-slider{
-		top: 20%;
-		right: 30px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		display: flex;
+	    flex-direction: column;
+	    align-items: center;
 	}
 	.carousel-inner>.item>a>img, .carousel-inner>.item>img{
 		height: 430px;
@@ -805,7 +832,8 @@ nav{
 		font-size: 16px;
 	}
 	#slider .container-fluid .container .header-socials{
-		right: 65px;
+		position: static;
+		margin-top: 10px;
 	}
 	#services{
 		background: none;
@@ -1125,19 +1153,23 @@ nav{
 		display: none;
 	}
 	#slider .container-fluid .container .right-slider{
-		right: 270px;
-		top: 30%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		display: flex;
+	    flex-direction: column;
+	    align-items: center;
 	}
 	.carousel-inner>.item>a>img, .carousel-inner>.item>img{
-		height: 540px;
+		height: 400px;
 		width: 100%;
 	}
 	#slider .container-fluid .container .right-slider .right-slider-inner ul li{
 		padding: 6px;
 	}
 	#slider .container-fluid .container .header-socials{
-		right: 300px;
-		top: 92%;
+		position: static;
+		margin-top: 10px;
 	}
 	#services{
 		background: none;
@@ -1301,5 +1333,15 @@ nav{
 @media (min-width: 1251px) {
 	#slider .container-fluid .container .controls{
 		top: 75%;
+	}
+}
+@media (max-width: 992px){
+	.navbar{
+		position: static !important;
+		margin-bottom: 0 !important;
+	}
+	.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+		height: 400px;
+		width: 100%;
 	}
 }
