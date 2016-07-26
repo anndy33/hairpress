@@ -218,10 +218,10 @@
 // Hidden by default for smaller viewports
 .carousel-caption {
   position: absolute;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  // bottom: 20px;
+  // z-index: 10;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
   color: @carousel-caption-color;
   text-align: center;
   text-shadow: @carousel-text-shadow;
@@ -257,7 +257,15 @@
 
   // Show and left align the captions
   .carousel-caption {
-    top: 5%;
+    img.line-1{
+      margin-bottom: -30px;
+      margin-left: -120px;
+    }
+    img.line-2{
+      margin-top: -30px;
+        margin-left: -120px;
+    }
+    top: 15%;
     // left: 10%;
     // right: 20%;
     // padding-bottom: 30px;
@@ -268,6 +276,7 @@
       color: black;
       font-family: "LeagueGothic-Regular";
       line-height: 70px;
+      z-index: 100;
       img{
        margin: 0;
       }

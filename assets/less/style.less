@@ -1,5 +1,13 @@
 // Bootstrap
 @import 'bootstrap/bootstrap';
+@font-face{
+	 font-family: "PTSans Bold";
+	  src: url('../build/fonts/PTS75F.ttf');
+}
+@font-face{
+	font-family: "Helvetica";
+	  src: url('../build/fonts/Helvetica.ttf');
+}
 
 section{
 	padding-top: 45px;
@@ -12,6 +20,14 @@ section{
 nav{
 	width: 100%;
 }
+.navbar-default .navbar-nav>li>a{
+	 font-family: "PTSans Bold";
+}
+.dropdown-menu>li>a{
+	 font-family: "PTSans Bold";
+	 text-transform: none;
+}
+
 .navbar-default .navbar-nav > .open > a{
     background-color: rgba(12, 8, 8, 0.74) !important;
     color: white !important;
@@ -51,7 +67,7 @@ nav{
 			height: 100%;
 			.controls{
 				position: absolute;
-				top: 65%;
+				top: 70%;
 				z-index: 1000;
 				a.left-control{
 					text-decoration: none !important;	
@@ -60,57 +76,124 @@ nav{
 					text-decoration: none !important;
 				}	
 			}	
+			.ce{
+				margin-top: 30px; 
+			}
 			.right-slider{
 			float: right;
 			position: absolute;
 			right: 0px;
 			top: 20%;
-				.right-slider-inner{
-					position: absolute;
-					float: right;
-					img{
-						float: right;
-						right: 110px;
-						padding-right: 5px;
-						
-					}
-					span{
-						width: 215px;
+				.timeopen{
+					width: 220px;
+						.opentime{
+						.bg1a{
+						background: #1a1a1a;
+						}
+						.closes{
+						color: #666666;
+						}
+						.act{
+						color: #7657a5;
+						}
+						.bg1a .closes{
+							color: #505050;
+						}
+						span.time{
+							color: #505050;
+						}
+						position: relative;
+						display: flex;
+						flex-direction:column;
+						top:28%;
+						text-align: center;
+						background: #303030;
+						padding:10px;
+						z-index: 2;
+						width: 100%;
+						>img{
+						width: 100%;
+						height: 43px;
+						position: absolute;
+						left:0;
+						right:0;
+						top:-15%;
+						z-index: 1;
+						}
+						>p{
+						color: #ffffff;
 						font-size: 18px;
-						background-color: #303030;
-						color: white;
-						padding: 10px;
-						padding-left: 42px;	
-						padding-right: 42px;
-						border-bottom: 1px solid black;
-					}
-					ul{
-						width: 215px;
-						border: 5px solid #303030;
+						text-transform: uppercase;
+						font-family: "PTSans";
 
-						li{
-							list-style-type: none;
-							padding: 10px;
-							margin-left: -40px;
-							background-color: #303030;
-
-							a{
-								color: white;
-								font-size: 12px;
-							}
-							a.time{
-								float: right;
-								color: #505050;
-							}
-							a.current{
-								color: #6e519b;
+						}
+						ul{
+							padding: 0;
+							color: #ffffff;
+							font-size: 12px;
+							border:2px solid #1a1a1a;
+							font-family: "PTSans Bold";
+							li{
+								width: 100%;
+								height: 30px;
+								line-height: 30px;
+								display: flex;
+								justify-content:space-between;
+								span{
+								margin:0 5px;
+								}
 							}
 						}
-						li.odd{
-							background-color: #212121;
-						}
 					}
-				}	
+				}
+				// .right-slider-inner{
+				// 	position: absolute;
+				// 	float: right;
+				// 	img{
+				// 		float: right;
+				// 		right: 110px;
+				// 		padding-right: 5px;
+						
+				// 	}
+				// 	span{
+				// 		width: 215px;
+				// 		font-size: 18px;
+				// 		background-color: #303030;
+				// 		color: white;
+				// 		padding: 10px;
+				// 		padding-left: 49px;	
+				// 		padding-right: 49px;
+				// 		border-bottom: 1px solid black;
+				// 		 font-family: "PTSans Bold";
+				// 	}
+				// 	ul{
+				// 		width: 215px;
+				// 		border: 4px solid #303030;
+
+				// 		li{
+				// 			list-style-type: none;
+				// 			padding: 10px;
+				// 			margin-left: -40px;
+				// 			background-color: #303030;
+
+				// 			a{
+				// 				color: white;
+				// 				font-size: 12px;
+				// 				 font-family: "PTSans Bold";
+				// 			}
+				// 			a.time{
+				// 				float: right;
+				// 				color: #505050;
+				// 			}
+				// 			a.current{
+				// 				color: #6e519b;
+				// 			}
+				// 		}
+				// 		li.odd{
+				// 			background-color: #212121;
+				// 		}
+				// 	}
+				// }	
 			}
 			.header-socials{
 			position: absolute;
@@ -118,7 +201,7 @@ nav{
 			display: flex;
 			flex-directin: row;
 			right: 0px;
-			top: 90%;
+			top: 105%;
 				.social-item{
 					background-color: #303030;
 						margin-left: 20px;
@@ -178,6 +261,7 @@ nav{
 		p{
 			font-size: 13px;
 			color: #727272;
+			font-family: "Helvetica";
 			a{
 				color: #8a6eb9;
 				font-weight: bold;
@@ -270,6 +354,7 @@ nav{
 			p{
 			font-size: 13px;
 			color: #727272;
+			font-family: "Helvetica";
 				a{
 					color: #8a6eb9;
 					font-weight: bold;
@@ -508,8 +593,9 @@ nav{
 		p{
 			font-size: 13px;
 			color: #7e7e7e;
-			line-height: 150%;
+			line-height: 180%;
 			overflow: hidden;
+			font-family: "Helvetica";
 		}
 	}
 	.ab-logo{
@@ -603,6 +689,7 @@ nav{
 			p{
 				color: white;
 				font-size: 13px;
+				font-family: "Helvetica";
 				span{
 					font-size: 11px;
 					color: grey;
@@ -625,6 +712,7 @@ nav{
 			p{
 				font-size: 13px;
 				color: #fff;
+				font-family: "Helvetica";
 				a{
 					text-decoration: none;
 					text-transform: uppercase;
@@ -661,6 +749,7 @@ nav{
 		p{
 			color: grey;
 			font-size: 12px;
+			font-family: "Helvetica";
 			span{
 				font-weight: bold;
 				color: white;
@@ -834,6 +923,7 @@ nav{
 			    	color: #727272;
 			    	font-size: 12px;
 			    	padding-bottom: 0px;
+			    	font-family: "Helvetica";
 			    }
 				}
 			div.panel.show {
@@ -1151,8 +1241,9 @@ nav{
 		font-size: 13px;
 	}
 }
-/*responsive with the size of container: 920px*/
+/*responsive with the size of container: 960px*/
 @media (min-width : 992px) and (max-width: 1140px){
+
 	.navbar-nav>li>a{
 		padding: 10px;
 	}
@@ -1161,12 +1252,18 @@ nav{
 		padding-left: 0px;
 		padding-top: 10px;
 	}
+	#slider .container-fluid .container .ce{
+		margin-top: 0px;
+		margin-right: 10px;
+	}
 	.carousel-caption{
 		left: 0;
+		display: block;
 	}
 	#slider .container-fluid .container .controls{
-		top: 85%;
-		left: -17px;
+		top: 80%;
+		left: -80px;
+		display: block;
 	}
 	.carousel-caption h2{
 		font-size: 75px;
@@ -1179,6 +1276,7 @@ nav{
 	}
 	#slider .container-fluid .container .header-socials{
 		right: 15px;
+		margin-top: -10px;
 	}
 	#services{
 		background: none;
@@ -1206,12 +1304,20 @@ nav{
 	}
 }
 /*responsive for the screen 1140px*/
-@media  (min-width: 1141px){
+@media  (min-width: 1141px)and (max-width: 1250px){
+	#slider .container-fluid .container .ce{
+		margin-top: 10px;
+	}
+	#slider .container-fluid .container .right-slider .timeopen .opentime{
+		padding: 5px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 	.navbar-nav>li>a{
 		padding: 10px;
 	}
 	#slider .container-fluid .container .controls{
-		top: 75%;
+		top: 80%;
 	}
 	#news .new-item{
 		padding-right: 15px;
@@ -1230,5 +1336,10 @@ nav{
 	}
 	#aboutus .ab-logo img{
 		padding-right: 20px;
+	}
+}
+@media (min-width: 1251px) {
+	#slider .container-fluid .container .controls{
+		top: 75%;
 	}
 }
