@@ -6,7 +6,7 @@
 	<title>Appointment</title>
 	 <!--add favoicon for website-->
     <link rel="icon" type="images/png" href="images/favicon.png">
-    <link rel="stylesheet" href="build/font-awesome.min.css">
+    <link rel="stylesheet" href="build/css/font-awesome.css">
     <link rel="stylesheet" href="build/style.css">
     <link rel="stylesheet" href="build/middle.css">
     <link rel="stylesheet" href="build/blog.css">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="build/animate.css">
     <link rel="stylesheet" href="build/owl.theme.css">
     <link rel="stylesheet" href="build/owl.carousel.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 </head>
@@ -193,21 +194,27 @@
 								 </form>
 							</div>
 						</div>	
-						<div class="app-date">
-							<div class="form-group date-picker">
-								<label class="control-label " for="date">
-									Date*
-								</label>
-								<div class="input-group">
-									<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-									<div class="input-group-addon">
-									<i class="fa fa-calendar"></i>
-									</div>
-									<input type="checkbox" value="None" id="squaredThree" name="check" checked />
-									<span>I’m flexible on dates</span>
-								</div>
+						<div class="app-date ct-item-inner">
+							 <form method="post">
+							     <div class="form-group ">
+							      <label class="control-label " for="date">
+							       Date
+							      </label>
+							      <div class="input-group date-ap">
+							       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/> &nbsp;&nbsp;
+							       <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;
+							       <input type="checkbox" id="checkbox">&nbsp;&nbsp;
+							       <span>I’m flexible on dates</span>
+							      </div>
+							     </div>
+							 </form>
+							</div>	
+						<div class="ct-item-inner">
+								<label>Type here if you have some special requirements*</label>
+								 <form>
+								 	<textarea class="full-width"></textarea>
+								 </form>
 							</div>
-						</div>					
 					</div>
 				</div>
 			</div>
@@ -371,5 +378,11 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 	<script src="assets/js/libs/bootstrap-hover-dropdown.js"></script>
 	<script src="build/scripts.min.js"></script>	
+	
+
+
+	<!-- Include Date Range Picker -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
 </body>
 </html>
